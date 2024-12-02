@@ -131,8 +131,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -209,8 +209,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -316,8 +316,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -394,8 +394,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -501,8 +501,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -579,8 +579,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -717,8 +717,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -795,8 +795,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -902,8 +902,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -980,8 +980,8 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string",
+              "format": "uuid"
             }
           }
         ],
@@ -1033,13 +1033,6 @@
           },
           "user": {
             "$ref": "#/components/schemas/User"
-          },
-          "orderDetails": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OrderDetail"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false

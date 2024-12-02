@@ -25,7 +25,7 @@ namespace FlutterAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Order>> GetOrder(int id)
+        public async Task<ActionResult<Order>> GetOrder(Guid id)
         {
             var Order = await _context.Orders.FindAsync(id);
 
@@ -73,7 +73,7 @@ namespace FlutterAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteOrder(int id)
+        public async Task<IActionResult> DeleteOrder(Guid id)
         {
             var Order = await _context.Orders.FindAsync(id);
 

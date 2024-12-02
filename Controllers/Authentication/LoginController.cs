@@ -35,8 +35,15 @@ namespace FlutterAPI.Controllers
 
             // Generate JWT token
             var token = GenerateJwtToken(user);
-            return Ok(new { Token = token });
+
+            // Return both UserID and token
+            return Ok(new
+            {
+                UserID = user.UserID,
+                Token = token
+            });
         }
+
 
         private string GenerateJwtToken(User user)
         {

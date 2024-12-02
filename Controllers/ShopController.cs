@@ -25,7 +25,7 @@ namespace FlutterAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Shop>> GetShop(int id)
+        public async Task<ActionResult<Shop>> GetShop(Guid id)
         {
             var shop = await _context.Shops.FindAsync(id);
 
@@ -73,7 +73,7 @@ namespace FlutterAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteShop(int id)
+        public async Task<IActionResult> DeleteShop(Guid id)
         {
             var shop = await _context.Shops.FindAsync(id);
 

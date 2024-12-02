@@ -71,7 +71,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -118,7 +118,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -180,7 +180,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -227,7 +227,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -289,7 +289,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -336,7 +336,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -414,7 +414,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -461,7 +461,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -523,7 +523,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -570,7 +570,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
