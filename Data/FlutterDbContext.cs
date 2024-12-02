@@ -15,6 +15,9 @@ namespace FlutterAPI.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<ShopProduct> ShopProducts { get; set; }
+        public DbSet<Cart> Cart { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Wishlist> Wishlist { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,6 +29,9 @@ namespace FlutterAPI.Data
             modelBuilder.Entity<Order>().Property(o => o.OrderID).ValueGeneratedOnAdd();
             modelBuilder.Entity<OrderDetail>().Property(od => od.OrderDetailID).ValueGeneratedOnAdd();
             modelBuilder.Entity<ShopProduct>().Property(sp => sp.ShopProductID).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Cart>().Property(o => o.CartID).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Category>().Property(od => od.CategoryID).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Wishlist>().Property(sp => sp.WishlistID).ValueGeneratedOnAdd();
         }
     }
 

@@ -3,26 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FlutterAPI.Models
 {
-    public class Product
+    public class Category
     {
         [Key]
-        public Guid ProductID { get; set; }
+        public Guid CategoryID { get; set; }
 
         public string Name { get; set; } = string.Empty;
 
         public string Description { get; set; } = string.Empty;
 
-        public decimal Price { get; set; }
-
-        public string? ImageUrl { get; set; }
-
-        [ForeignKey(nameof(Category))]
-        public Guid CategoryID { get; set; }
-
-        public Category? Category { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-
     }
 
 }
