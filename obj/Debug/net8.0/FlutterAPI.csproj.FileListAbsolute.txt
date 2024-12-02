@@ -289,3 +289,4 @@ D:\flutter\FlutterAPI\FlutterAPI\obj\Debug\net8.0\FlutterAPI.RazorAssemblyInfo.c
 D:\flutter\FlutterAPI\FlutterAPI\obj\Debug\net8.0\FlutterAPI.RazorAssemblyInfo.cs
 D:\flutter\FlutterAPI\FlutterAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\flutter\FlutterAPI\FlutterAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\flutter\FlutterAPI\FlutterAPI\obj\Debug\net8.0\FlutterAPI.sourcelink.json
