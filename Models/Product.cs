@@ -7,12 +7,14 @@ namespace FlutterAPI.Models
     {
         [Key]
         public Guid ProductID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+
+        public string Name { get; set; } = string.Empty;
+
+        public string Description { get; set; } = string.Empty;
+
         public decimal Price { get; set; }
 
-        [ForeignKey(nameof(Shop))]
-        public Guid ShopID { get; set; }
-        public Shop? Shop { get; set; }
+        public string? ImageUrl { get; set; }
     }
+
 }

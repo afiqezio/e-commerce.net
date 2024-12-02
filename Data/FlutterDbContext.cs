@@ -14,6 +14,7 @@ namespace FlutterAPI.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<ShopProduct> ShopProducts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +25,7 @@ namespace FlutterAPI.Data
             modelBuilder.Entity<Product>().Property(p => p.ProductID).ValueGeneratedOnAdd();
             modelBuilder.Entity<Order>().Property(o => o.OrderID).ValueGeneratedOnAdd();
             modelBuilder.Entity<OrderDetail>().Property(od => od.OrderDetailID).ValueGeneratedOnAdd();
+            modelBuilder.Entity<ShopProduct>().Property(sp => sp.ShopProductID).ValueGeneratedOnAdd();
         }
     }
 

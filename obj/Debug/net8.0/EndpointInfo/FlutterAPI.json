@@ -1099,12 +1099,9 @@
             "type": "number",
             "format": "double"
           },
-          "shopID": {
+          "imageUrl": {
             "type": "string",
-            "format": "uuid"
-          },
-          "shop": {
-            "$ref": "#/components/schemas/Shop"
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1131,6 +1128,10 @@
           "longitude": {
             "type": "number",
             "format": "double"
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
           },
           "createdAt": {
             "type": "string",
@@ -1159,6 +1160,10 @@
             "nullable": true
           },
           "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
             "type": "string",
             "nullable": true
           },

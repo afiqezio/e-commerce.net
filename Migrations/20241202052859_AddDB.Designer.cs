@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FlutterAPI.Migrations
 {
     [DbContext(typeof(FlutterDbContext))]
-    [Migration("20241201033841_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241202052859_AddDB")]
+    partial class AddDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,7 +35,7 @@ namespace FlutterAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("TotalAmount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<Guid>("UserID")
                         .HasColumnType("uniqueidentifier");
@@ -57,7 +57,7 @@ namespace FlutterAPI.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<Guid>("ProductID")
                         .HasColumnType("uniqueidentifier");
@@ -84,6 +84,9 @@ namespace FlutterAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -91,12 +94,7 @@ namespace FlutterAPI.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid>("ShopID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("ProductID");
-
-                    b.HasIndex("ShopID");
 
                     b.ToTable("Products");
                 });
@@ -114,6 +112,9 @@ namespace FlutterAPI.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("Latitude")
                         .HasColumnType("decimal(18,2)");
 
@@ -127,6 +128,30 @@ namespace FlutterAPI.Migrations
                     b.HasKey("ShopID");
 
                     b.ToTable("Shops");
+                });
+
+            modelBuilder.Entity("FlutterAPI.Models.ShopProduct", b =>
+                {
+                    b.Property<Guid>("ShopProductID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ShopID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ShopProductID");
+
+                    b.HasIndex("ProductID");
+
+                    b.HasIndex("ShopID");
+
+                    b.ToTable("ShopProducts");
                 });
 
             modelBuilder.Entity("FlutterAPI.Models.User", b =>
@@ -144,6 +169,9 @@ namespace FlutterAPI.Migrations
 
                     b.Property<string>("FullName")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
@@ -191,13 +219,21 @@ namespace FlutterAPI.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("FlutterAPI.Models.Product", b =>
+            modelBuilder.Entity("FlutterAPI.Models.ShopProduct", b =>
                 {
+                    b.HasOne("FlutterAPI.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("FlutterAPI.Models.Shop", "Shop")
                         .WithMany()
                         .HasForeignKey("ShopID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Product");
 
                     b.Navigation("Shop");
                 });

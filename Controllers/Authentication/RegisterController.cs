@@ -36,6 +36,7 @@ namespace FlutterAPI.Controllers
                 Email = userDto.Email,
                 Phone = userDto.Phone,
                 PasswordHash = HashPassword(userDto.Password),
+                ImageUrl = "https://static.vecteezy.com/system/resources/previews/005/129/844/non_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg",
                 CreatedAt = DateTime.UtcNow,
                 UpdatedAt = DateTime.UtcNow
             };
